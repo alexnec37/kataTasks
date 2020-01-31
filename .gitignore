@@ -11,3 +11,8 @@ packages/*
 *.user
 *.suo
 *.lock
+*.dtbcache
+*.ide
+*.ide-shm
+*.ide-wal
+
