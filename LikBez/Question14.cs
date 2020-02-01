@@ -6,8 +6,6 @@ namespace LikBez
 {
     class Question14
     {
-        string ss = "sdfsdfdsf";
-
         void test1()
         {
             string s = null;

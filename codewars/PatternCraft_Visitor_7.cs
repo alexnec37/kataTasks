@@ -42,7 +42,7 @@ namespace codewars
 
     class Map 
     {
-        ArrayList units;
+        //ArrayList units;
 
         public void Accept(IVisitor visitor)
         {

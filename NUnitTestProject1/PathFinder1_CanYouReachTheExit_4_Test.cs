@@ -62,11 +62,11 @@ namespace NUnitTestProject1
                        "....W.";
 
             Assert.AreEqual(true, PathFinder1_CanYouReachTheExit_4.PathFinder(y));
-            //Assert.AreEqual(true, PathFinder1_CanYouReachTheExit_4.PathFinder(z));
-            //Assert.AreEqual(true, PathFinder1_CanYouReachTheExit_4.PathFinder(a));
-            //Assert.AreEqual(false, PathFinder1_CanYouReachTheExit_4.PathFinder(b));
-            //Assert.AreEqual(true, PathFinder1_CanYouReachTheExit_4.PathFinder(c));
-            //Assert.AreEqual(false, PathFinder1_CanYouReachTheExit_4.PathFinder(d));
+            Assert.AreEqual(true, PathFinder1_CanYouReachTheExit_4.PathFinder(z));
+            Assert.AreEqual(true, PathFinder1_CanYouReachTheExit_4.PathFinder(a));
+            Assert.AreEqual(false, PathFinder1_CanYouReachTheExit_4.PathFinder(b));
+            Assert.AreEqual(true, PathFinder1_CanYouReachTheExit_4.PathFinder(c));
+            Assert.AreEqual(false, PathFinder1_CanYouReachTheExit_4.PathFinder(d));
         }
     }
 }
