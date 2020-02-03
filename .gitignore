@@ -16,3 +16,4 @@ packages/*
 *.ide-shm
 *.ide-wal
 
+.vs/
