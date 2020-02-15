@@ -9,16 +9,16 @@ namespace codewars.Tree.InvertBinaryTree_6
     {
         public static TreeNode InvertTree(TreeNode root)
         {
-            inOrder(root);
+            preOrder(root);
             return root;
         }
 
-        private static void inOrder(TreeNode node)
+        private static void preOrder(TreeNode node)
         {
             if (node == null) return;
             swap(node);
-            inOrder(node.Left);
-            inOrder(node.Right);
+            preOrder(node.Left);
+            preOrder(node.Right);
         }
 
         private static void swap(TreeNode node)
