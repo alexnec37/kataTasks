@@ -39,31 +39,31 @@ namespace codewars.Labirint
         {
             return cell == 'W' ? 0 : int.Parse(cell.ToString()) + 1;
         }
-
+        
         public static int WaveLabirint(int[][] maze)
         {
-            var queueWays = new Queue<(int, int)>();
             int x = 0, y = 0;
             int n = 0;
 
+            Queue<(int, int)> buf = new Queue<(int, int)>();
             int sizeField = maze.Length - 2;
             int sx = 1, sy = 1, tx = sizeField, ty = sizeField;
             int[,] fillmap = preparePassedWays(maze.Length);
 
-            Action<int, int> proc = (newX, newY) =>
+            Action<int, int> proc = (newY, newX) =>
             {
                 n = calculateWeightStep(maze[y][x], maze[newY][newX], fillmap[y, x]);
                 if (fillmap[newY, newX] <= n) return;
 
                 fillmap[newY, newX] = n;
-                queueWays.Enqueue((newX, newY));
+                buf.Enqueue((newX, newY));
             };
 
-            queueWays.Enqueue((sx, sy));
-            fillmap[sy, sx] = 0;
-            while (queueWays.Count != 0)
+            fillmap[sy, sx] = n;
+            buf.Enqueue((sx, sy));
+            while (buf.Count != 0)
             {
-                (x , y) = queueWays.Dequeue();
+                (x, y) = buf.Dequeue();
 
                 if (maze[y][x + 1] > 0) proc(y, x + 1);
                 if (maze[y][x - 1] > 0) proc(y, x - 1);
